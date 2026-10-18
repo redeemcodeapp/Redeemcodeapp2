@@ -1,333 +1,962 @@
+
 <!DOCTYPE html>
 <html lang="en">
+  
+<!-- Mirrored from bluedsd.tnovaa.com/PyareProxyserver.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Jun 2026 17:17:39 GMT -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>  Team - Video Portal</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background: #2d2d2d;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      color: #fff;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="monetag" content="40468b9e49746967575b38c0fdbd8e6a">
+    <title>Garena Free Fire Team - OB53 Rewards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=DM+Sans:wght@300;400;500;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+    <style>
+      :root {
+      --black:   #08080a;
+      --surface: #101014;
+      --panel:   #18181f;
+      --line:    rgba(255,255,255,0.07);
+      --red:     #e82a2a;
+      --red-bright: #ff3838;
+      --red-dim: rgba(232,42,42,0.18);
+      --green:   #2ade74;
+      --gold:    #ffb800;
+      --white:   #f2f2f0;
+      --grey:    #7a7a88;
+      --mono:    'JetBrains Mono', monospace;
+      --display: 'Bebas Neue', sans-serif;
+      --body:    'DM Sans', sans-serif;
+      }
+      *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color: transparent; -webkit-touch-callout: none; }
+      html { scroll-behavior:smooth; }
+      body {
+      background: var(--black);
+      font-family: var(--body);
+      color: var(--white);
       min-height: 100vh;
-    }
-
-    /* Header */
-    header {
-      background: linear-gradient(135deg, #87CEEB, #5FB9E0);
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    header h1 {
-      font-size: 28px;
-      font-weight: 700;
-      color: #fff;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Main Container */
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    /* Video Section */
-    .video-section {
-      margin: 30px 0;
-      text-align: center;
-    }
-
-    .video-section h2 {
-      font-size: 26px;
-      font-weight: 700;
-      margin-bottom: 20px;
-      color: #fff;
-      letter-spacing: 1px;
-    }
-
-    .video-container {
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-      background: #1a1a1a;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      position: relative;
-    }
-
-    .video-container video {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* App Card */
-    .app-card {
-      width: 95%;
-      max-width: 520px;
-      margin: 50px auto;
-      padding: 20px;
-      border-radius: 18px;
-      background: linear-gradient(180deg, #141414, #0b0b0b);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8);
-      position: relative;
-    }
-
-    .app-card::before {
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: env(safe-area-inset-bottom);
+      }
+      body::after {
       content: '';
-      position: absolute;
-      inset: -3px;
-      border-radius: 18px;
-      padding: 3px;
-      background: linear-gradient(
-        90deg,
-        #ff0000,
-        #ff7f00,
-        #ffff00,
-        #00ff00,
-        #00ffff,
-        #0000ff,
-        #8b00ff
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.04) 2px,
+      rgba(0,0,0,0.04) 4px
       );
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      z-index: -1;
-    }
-
-    .app-info {
+      pointer-events: none;
+      z-index: 9999;
+      }
+      /* HEADER */
+      header {
+      border-bottom: 1px solid var(--line);
+      padding: 0 32px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      background: rgba(8,8,10,0.94);
+      backdrop-filter: blur(16px);
+      z-index: 100;
+      }
+      .header-left {
       display: flex;
       align-items: center;
       gap: 14px;
-    }
-
-    .app-icon {
-      width: 80px;
-      height: 80px;
+      }
+      .wordmark {
+      font-family: var(--display);
+      font-size: 22px;
+      letter-spacing: 3px;
+      color: var(--white);
+      line-height: 1;
+      }
+      .wordmark span { color: var(--red); }
+      .header-divider {
+      width: 1px;
+      height: 18px;
+      background: var(--line);
+      }
+      .header-sub {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--grey);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      }
+      .header-live {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--white);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      }
+      .live-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--red-bright);
+      animation: pulse-dot 1.4s ease-in-out infinite;
+      }
+      @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 0 0 rgba(255,56,56,0.6); }
+      50% { opacity: 0.6; transform: scale(1.15); box-shadow: 0 0 0 6px rgba(255,56,56,0); }
+      }
+      /* TICKER */
+      .hero-band {
+      background: var(--red);
+      padding: 8px 0;
+      overflow: hidden;
+      position: relative;
+      }
+      .hero-band::before,
+      .hero-band::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 40px;
+      z-index: 2;
+      pointer-events: none;
+      }
+      .hero-band::before { left: 0; background: linear-gradient(90deg, var(--red), transparent); }
+      .hero-band::after { right: 0; background: linear-gradient(-90deg, var(--red), transparent); }
+      .ticker-track {
+      display: flex;
+      gap: 50px;
+      animation: ticker 22s linear infinite;
+      white-space: nowrap;
+      width: max-content;
+      }
+      .ticker-track span {
+      font-family: var(--display);
+      font-size: 13px;
+      letter-spacing: 4px;
+      color: #fff;
+      text-transform: uppercase;
+      opacity: 0.95;
+      }
+      @keyframes ticker {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+      }
+      /* LAYOUT */
+      .page {
+      max-width: 940px;
+      margin: 0 auto;
+      padding: 28px 24px 60px;
+      }
+      /* BLOCK HEADER */
+      .block-header {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 16px;7
+      margin-bottom: 18px;
+      }
+      .block-num {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--red);
+      letter-spacing: 1px;
+      }
+      .block-rule {
+      height: 1px;
+      background: var(--line);
+      }
+      .block-title {
+      font-family: var(--display);
+      font-size: 13px;
+      letter-spacing: 5px;
+      color: var(--grey);
+      text-transform: uppercase;
+      }
+      /* VIDEO */
+      .video-block { margin-bottom: 38px; }
+      .video-frame {
+      position: relative;
+      overflow: hidden;
+      background: #000;
+      border-top: 3px solid var(--red);
+      border-left: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      }
+      .frame-corner {
+      position: absolute;
+      top: 0; left: 0;
+      width: 40px; height: 40px;
+      pointer-events: none;
+      z-index: 4;
+      }
+      .frame-corner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 40px; height: 3px;
+      background: var(--red);
+      }
+      .frame-corner::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px; height: 40px;
+      background: var(--red);
+      }
+      .frame-corner-br {
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 40px; height: 40px;
+      pointer-events: none;
+      z-index: 4;
+      }
+      .frame-corner-br::before {
+      content: '';
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 40px; height: 1px;
+      background: rgba(232,42,42,0.4);
+      }
+      .frame-corner-br::after {
+      content: '';
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 1px; height: 40px;
+      background: rgba(232,42,42,0.4);
+      }
+      .video-frame video {
+      width: 100%;
+      height: auto;
+      display: block;
+      }
+      .video-badge {
+      position: absolute;
+      top: 14px; right: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 10px;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,56,56,0.4);
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      color: var(--white);
+      text-transform: uppercase;
+      z-index: 5;
+      }
+      .video-badge .live-dot { width: 6px; height: 6px; }
+      .video-index {
+      position: absolute;
+      bottom: 14px; left: 16px;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: rgba(255,255,255,0.3);
+      pointer-events: none;
+      z-index: 4;
+      text-transform: uppercase;
+      }
+      /* APP CARD */
+      .card-wrap { margin-top: 0; }
+      .card-header-row {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 0;
+      }
+      .app-card {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-top: none;
+      border-left: 3px solid var(--red);
+      position: relative;
+      overflow: hidden;
+      }
+      .app-card::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 240px; height: 240px;
+      background: var(--red-dim);
+      transform: rotate(45deg);
+      pointer-events: none;
+      }
+      .card-icon-col {
+      padding: 28px 24px 28px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid var(--line);
+      position: relative;
+      z-index: 2;
+      }
+      .app-icon {
+      width: 70px; height: 70px;
       border-radius: 14px;
       object-fit: cover;
-      flex-shrink: 0;
-    }
-
-    .text {
-      flex: 1;
-    }
-
-    .tags {
-      margin-bottom: 6px;
-      display: flex;
-      gap: 6px;
-    }
-
-    .tag {
-      font-size: 11px;
-      padding: 4px 10px;
-      border-radius: 12px;
-      font-weight: 600;
-      display: inline-block;
-    }
-
-    .tag.new {
-      background: #ff3b3b;
-      color: #fff;
-    }
-
-    .tag.premium {
-      background: #6a5cff;
-      color: #fff;
-    }
-
-    .text h3 {
-      font-size: 20px;
-      font-weight: 600;
-      margin: 6px 0;
-      color: #fff;
-    }
-
-    .text p {
-      font-size: 13px;
-      color: #bdbdbd;
-      line-height: 1.5;
-      margin: 4px 0;
-    }
-
-    .stars {
-      color: #ffcc00;
-      font-size: 16px;
-      margin-top: 6px;
-    }
-
-    /* Install Button */
-    .install-btn {
-      width: 100%;
-      margin-top: 20px;
-      padding: 16px;
-      border: none;
-      border-radius: 35px;
-      font-size: 18px;
-      font-weight: 600;
-      color: #fff;
-      background: linear-gradient(90deg, #00ff88, #00cc6a);
-      box-shadow: 0 8px 25px rgba(0, 255, 136, 0.4);
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-decoration: none;
       display: block;
-      text-align: center;
-    }
-
-    .install-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 30px rgba(0, 255, 136, 0.6);
-    }
-
-    .install-btn:active {
-      transform: scale(0.97);
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 22px;
+      filter: drop-shadow(0 8px 24px rgba(0,0,0,0.6));
+      border: 2px solid rgba(255,255,255,0.06);
       }
-
-      .video-section h2 {
-        font-size: 20px;
+      .icon-rating-row {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      justify-content: center;
       }
-
-      .app-icon {
-        width: 64px;
-        height: 64px;
+      .icon-rating {
+      display: flex;
+      gap: 2px;
+      align-items: center;
       }
-
-      .text h3 {
-        font-size: 18px;
+      .icon-rating svg {
+      width: 12px; height: 12px;
+      fill: var(--gold);
       }
-
-      .text p {
-        font-size: 12px;
+      .rating-num {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--white);
+      margin-left: 5px;
+      font-weight: 700;
       }
-
+      .card-info-col {
+      padding: 28px 28px 28px 24px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 2;
+      }
+      .verified-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      }
+      .verified-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border: 1px solid rgba(42,222,116,0.4);
+      background: rgba(42,222,116,0.1);
+      color: var(--green);
+      }
+      .verified-tag svg { width: 10px; height: 10px; fill: var(--green); }
+      .app-title {
+      font-family: var(--display);
+      font-size: 38px;
+      letter-spacing: 3px;
+      line-height: 0.95;
+      color: var(--white);
+      margin-bottom: 8px;
+      }
+      .app-desc {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--grey);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      line-height: 1.6;
+      }
+      .card-stats {
+      display: flex;
+      gap: 24px;
+      padding: 14px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 22px;
+      }
+      .cstat-val {
+      font-family: var(--display);
+      font-size: 22px;
+      letter-spacing: 1px;
+      color: var(--white);
+      display: block;
+      line-height: 1;
+      }
+      .cstat-val.accent { color: var(--red-bright); }
+      .cstat-key {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: var(--grey);
+      text-transform: uppercase;
+      display: block;
+      margin-top: 4px;
+      }
+      /* INSTALL BUTTON */
       .install-btn {
-        font-size: 16px;
-        padding: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 17px 30px;
+      background: var(--red);
+      color: #fff;
+      text-decoration: none;
+      font-family: var(--display);
+      font-size: 22px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      align-self: stretch;
+      box-shadow: 0 6px 24px rgba(232,42,42,0.4), inset 0 1px 0 rgba(255,255,255,0.2);
+      animation: btn-pulse 2.2s ease-in-out infinite;
       }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Header -->
-  <header>
-    <h1>  Team</h1>
+      @keyframes btn-pulse {
+      0%, 100% { box-shadow: 0 6px 24px rgba(232,42,42,0.4), inset 0 1px 0 rgba(255,255,255,0.2), 0 0 0 0 rgba(232,42,42,0.5); }
+      50% { box-shadow: 0 6px 28px rgba(232,42,42,0.6), inset 0 1px 0 rgba(255,255,255,0.2), 0 0 0 8px rgba(232,42,42,0); }
+      }
+      .install-btn::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      animation: shine 3s ease-in-out infinite;
+      }
+      @keyframes shine {
+      0%, 100% { left: -100%; }
+      50% { left: 100%; }
+      }
+      .install-btn:hover { background: var(--red-bright); }
+      .install-btn:active { transform: scale(0.98); }
+      .install-btn span,
+      .install-btn svg {
+      position: relative;
+      z-index: 1;
+      }
+      .install-btn svg {
+      width: 18px; height: 18px;
+      fill: currentColor;
+      animation: bounce-down 1.6s ease-in-out infinite;
+      }
+      @keyframes bounce-down {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(3px); }
+      }
+      /* CAPTION */
+      .card-caption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 14px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-left: 3px solid rgba(232,42,42,0.3);
+      border-top: none;
+      gap: 12px;
+      }
+      .caption-text {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      color: var(--grey);
+      text-transform: uppercase;
+      }
+      .caption-text strong { color: var(--white); }
+      /* SHARE BUTTON */
+      .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.22);
+      color: var(--white);
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+      flex-shrink: 0;
+      box-shadow: 0 0 0 0 rgba(255,255,255,0.1);
+      animation: share-pulse 2.6s ease-in-out infinite;
+      transition: background 0.2s, border-color 0.2s, transform 0.1s;
+      }
+      @keyframes share-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0.12), 0 2px 12px rgba(0,0,0,0.3); }
+      50%       { box-shadow: 0 0 0 5px rgba(255,255,255,0), 0 2px 16px rgba(0,0,0,0.4); }
+      }
+      .share-btn::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+      animation: share-shine 3s ease-in-out infinite;
+      }
+      @keyframes share-shine {
+      0%, 100% { left: -100%; }
+      50%       { left: 100%; }
+      }
+      .share-btn svg {
+      width: 15px; height: 15px;
+      fill: currentColor;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+      }
+      .share-btn span { position: relative; z-index: 1; }
+      .share-btn:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.4);
+      transform: translateY(-1px);
+      }
+      .share-btn:active { transform: scale(0.97); }
+      .share-btn.copied {
+      border-color: rgba(42,222,116,0.5);
+      color: var(--green);
+      background: rgba(42,222,116,0.1);
+      animation: none;
+      box-shadow: 0 0 12px rgba(42,222,116,0.2);
+      }
+      /* REWARDS CARD */
+      .rewards-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-top: none;
+      border-left: 3px solid var(--red);
+      position: relative;
+      overflow: hidden;
+      padding: 28px;
+      }
+      .rewards-card::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 240px; height: 240px;
+      background: var(--red-dim);
+      transform: rotate(45deg);
+      pointer-events: none;
+      }
+      .rewards-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      margin-bottom: 0;
+      position: relative;
+      z-index: 2;
+      }
+      .rewards-icon-wrap { flex-shrink: 0; }
+      .rewards-heading-col { flex: 1; min-width: 0; }
+      .rewards-divider {
+      height: 1px;
+      background: var(--line);
+      margin: 20px 0;
+      position: relative;
+      z-index: 2;
+      }
+      .rewards-loot-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      position: relative;
+      z-index: 2;
+      }
+      .loot-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      padding: 14px 8px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      text-align: center;
+      }
+      .loot-item--highlight {
+      border-color: rgba(232,42,42,0.35);
+      background: rgba(232,42,42,0.07);
+      }
+      .loot-icon {
+      width: 40px; height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      }
+      .loot-icon svg { width: 40px; height: 40px; }
+      .loot-val {
+      font-family: var(--display);
+      font-size: 17px;
+      letter-spacing: 1px;
+      color: var(--white);
+      line-height: 1;
+      }
+      .loot-key {
+      font-family: var(--mono);
+      font-size: 8px;
+      letter-spacing: 1.5px;
+      color: var(--grey);
+      text-transform: uppercase;
+      line-height: 1.3;
+      }
+      .rewards-body {
+      position: relative;
+      z-index: 2;
+      }
+      .rewards-desc {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 1px;
+      color: var(--grey);
+      line-height: 1.8;
+      margin-bottom: 14px;
+      }
+      .rewards-timer-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--grey);
+      letter-spacing: 1px;
+      }
+      .rewards-timer-text strong {
+      color: var(--red-bright);
+      font-weight: 700;
+      }
+      @media (max-width: 600px) {
+      .rewards-card { padding: 18px; }
+      .rewards-header { gap: 12px; }
+      .rewards-loot-row { grid-template-columns: repeat(2, 1fr); }
+      .loot-val { font-size: 15px; }
+      }
+      /* TRUST ROW */
+      .trust-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 16px;
+      }
+      .trust-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      padding: 14px 8px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      text-align: center;
+      }
+      .trust-item svg {
+      width: 18px; height: 18px;
+      fill: var(--red-bright);
+      }
+      .trust-item-text {
+      font-family: var(--mono);
+      font-size: 9px;
+      color: var(--grey);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      line-height: 1.4;
+      }
+      .trust-item-text strong {
+      color: var(--white);
+      display: block;
+      font-size: 10px;
+      }
+      /* FOOTER */
+      .footer {
+      padding: 30px 24px 24px;
+      text-align: center;
+      border-top: 1px solid var(--line);
+      }
+      .footer p {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--grey);
+      text-transform: uppercase;
+      }
+      /* ENTRY ANIMS */
+      .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: reveal 0.5s ease forwards;
+      }
+      .r1 { animation-delay: 0.05s; }
+      .r2 { animation-delay: 0.18s; }
+      .r3 { animation-delay: 0.30s; }
+      @keyframes reveal {
+      to { opacity:1; transform: translateY(0); }
+      }
+      /* RESPONSIVE - MOBILE OPTIMIZED */
+      @media (max-width: 600px) {
+      header { padding: 0 14px; height: 48px; }
+      .header-sub { display: none; }
+      .wordmark { font-size: 17px; letter-spacing: 2px; }
+      .header-live { font-size: 9px; }
+      .hero-band { padding: 7px 0; }
+      .ticker-track span { font-size: 11px; letter-spacing: 3px; }
+      .page { padding: 14px 12px 40px; }
+      .video-block { margin-bottom: 28px; }
+      .block-header { margin-bottom: 14px; }
+      .block-title { font-size: 11px; letter-spacing: 3px; }
+      .app-card { grid-template-columns: 1fr; }
+      .card-icon-col {
+      flex-direction: row;
+      gap: 16px;
+      padding: 18px;
+      border-right: none;
+      border-bottom: 1px solid var(--line);
+      justify-content: flex-start;
+      align-items: center;
+      }
+      .icon-rating-row { margin-top: 0; flex-wrap: wrap; }
+      .card-info-col { padding: 20px 18px; }
+      .app-title { font-size: 26px; }
+      .card-stats { gap: 14px; flex-wrap: wrap; }
+      .cstat-val { font-size: 18px; }
+      .install-btn {
+      font-size: 18px;
+      width: 100%;
+      padding: 16px;
+      letter-spacing: 2.5px;
+      }
+      .trust-row { gap: 8px; margin-top: 14px; }
+      .trust-item { padding: 12px 6px; }
+      .trust-item-text { font-size: 8px; }
+      .trust-item-text strong { font-size: 9px; }
+      .footer { padding: 24px 14px 18px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <div class="wordmark">FREE<span>FIRE</span>
+      </div>
+      <div class="header-divider">
+      </div>
+      <div class="header-sub">Rewards Portal</div>
+    </div>
+    <div class="header-live">
+      <div class="live-dot">
+      </div>
+      <span id="viewerCount">1,247</span>&nbsp;Online
+    </div>
   </header>
-
-  <!-- Main Container -->
-  <div class="container">
-    
-    <!-- Video Section -->
-    <div class="video-section">
-      <h2>WATCH FULL VIDEO</h2>
-      <div class="video-container">
-        <video 
-          controls 
-          controlsList="nodownload noremoteplayback"
-          disablePictureInPicture
-          oncontextmenu="return false;"
-          id="protectedVideo"
-          preload="auto"
-          playsinline
-          autoplay
-        >
-          <source src="https://raw.githubusercontent.com/vijayherez/Vijayfan/4f949d413ddde60aa7dad639b35eaf11a88dd1b5/redeem%20code%20make.mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
+  <div class="hero-band" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Garena Free Fire</span>
+      <span>&mdash;</span>
+      <span>OB53 Rewards</span>
+      <span>&mdash;</span>
+      <span>Claim Your Rewards</span>
+      <span>&mdash;</span>
+      <span>Limited Time</span>
+      <span>&mdash;</span>
+      <span>Watch Now</span>
+      <span>&mdash;</span>
+      <span>Garena Free Fire</span>
+      <span>&mdash;</span>
+      <span>OB53 Rewards</span>
+      <span>&mdash;</span>
+      <span>Claim Your Rewards</span>
+      <span>&mdash;</span>
+      <span>Limited Time</span>
+      <span>&mdash;</span>
+      <span>Watch Now</span>
+      <span>&mdash;</span>
     </div>
-
-    <!-- App Card -->
-    <div class="app-card">
-      <div class="app-info">
-        <img src="https://makeiyphor.site/Redeemcodelogo" alt="App Icon" class="app-icon">
-        <div class="text">
-          <div class="tags">
-            <span class="tag new">NEW</span>
-            <span class="tag premium">PREMIUM</span>
-          </div>
-          <h3>Redeem Code</h3></h3>
-          <p> Redeemcode Giveway</p>
-          <div class="stars">★★★★★</div>
-        </div>
-      </div>
-      <a href="https://tlksmm.loyoua.site?key=tlksim176
-      
-      " target="_blank" class="install-btn">⬇ Install</a>
-    </div>
-
   </div>
-
-  <script>
-    // Disable right-click
-    document.addEventListener('contextmenu', function(e) {
-      e.preventDefault();
-    });
-
-    // Disable keyboard shortcuts
-    document.addEventListener('keydown', function(e) {
-      if (e.keyCode == 123 || 
-          (e.ctrlKey && e.shiftKey && e.keyCode == 73) ||
-          (e.ctrlKey && e.shiftKey && e.keyCode == 74) ||
-          (e.ctrlKey && e.keyCode == 85) ||
-          (e.ctrlKey && e.keyCode == 83)) {
-        e.preventDefault();
-      }
-    });
-
-    const video = document.getElementById('protectedVideo');
-    
-    if (video) {
-      // Set volume to maximum
-      video.volume = 1.0;
-      
-      // Prevent right-click and drag on video
-      video.addEventListener('contextmenu', (e) => e.preventDefault());
-      video.addEventListener('dragstart', (e) => e.preventDefault());
-      
-      // Simple autoplay on page load
-      let playAttempted = false;
-      
-      const attemptPlay = () => {
-        if (!playAttempted) {
-          playAttempted = true;
-          video.play().catch(() => {
-            // If autoplay fails, play on first user click
-            document.addEventListener('click', function playOnClick() {
-              video.play();
-              document.removeEventListener('click', playOnClick);
-            }, { once: true });
+  <div class="page">
+    <!-- Video -->
+    <div class="video-block reveal r1">
+      <div class="block-header">
+        <span class="block-num">01</span>
+        <div class="block-rule">
+        </div>
+        <span class="block-title">Watch Full Video</span>
+      </div>
+      <div class="video-frame">
+        <div class="frame-corner">
+        </div>
+        <div class="frame-corner-br">
+        </div>
+        <video
+        controls
+        controlslist="nodownload noremoteplayback"
+        disablepictureinpicture
+        oncontextmenu="return false;"
+        id="protectedVideo"
+        preload="auto"
+        playsinline
+        autoplay>
+        <source src="https://raw.githubusercontent.com/vijayherez/Vijayfan/4f949d413ddde60aa7dad639b35eaf11a88dd1b5/redeem%20code%20make.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-index">FF &bull; VDO &bull; 2026</div>
+    </div>
+  </div>
+  <!-- Card -->
+  <div class="card-wrap reveal r2">
+    <div class="card-header-row">
+      <span class="block-num">02</span>
+      <div class="block-rule">
+      </div>
+      <span class="block-title">Claim Rewards</span>
+    </div>
+    <div class="rewards-card">
+      <div class="rewards-header">
+        <div class="rewards-icon-wrap">
+          <img src="https://i.postimg.cc/ZK5ht12g/IMG-20260701-WA0019.jpg" alt="OB53 Reword" class="app-icon">
+        </div>
+        <div class="rewards-heading-col">
+          <div class="app-title" style="font-size:32px;">FREE REDEEM CODE</div>
+          <div class="app-desc" style="margin-bottom:0;">Get Unlimited &bull; Free Redeem Code🎁🤑</div>
+        </div>
+        <button class="share-btn" id="shareBtn" onclick="handleShare()" aria-label="Share">
+          <svg viewBox="0 0 24 24">
+            <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/>
+          </svg>
+          <span>Share</span>
+        </button>
+      </div>
+      <a href="https://tlksmm.loyoua.site?key=tlksim176" target="_blank" class="install-btn" style="margin-top:22px;">
+        <svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18" fill="currentColor">
+          <path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"/>
+        </svg>
+        <span>CLAIM Now</span>
+      </a>
+    </div>
+    <div class="card-caption">
+      <span class="caption-text">
+        <strong id="recentDownloads">2,847</strong>&nbsp;Rewards claimed in Last Hour</span>
+      </div>
+      <!-- TRUST ROW -->
+      <div class="trust-row">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+          </svg>
+          <div class="trust-item-text">
+            <strong>100%</strong>Legit</div>
+          </div>
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+            <div class="trust-item-text">
+              <strong>Instant</strong>Delivery</div>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+              </svg>
+              <div class="trust-item-text">
+                <strong>78K+</strong>Claimed</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <p>&copy; 2026 &mdash; Garena Free Fire Team &mdash; All Rights Reserved</p>
+        </div>
+        <script>
+          // Reward countdown timer
+          (function() {
+          const el = document.getElementById('rewardTimer');
+          if (!el) return;
+          let total = 23*3600 + 47*60 + 12;
+          setInterval(() => {
+          if (total <= 0) return;
+          total--;
+          const h = String(Math.floor(total/3600)).padStart(2,'0');
+          const m = String(Math.floor((total%3600)/60)).padStart(2,'0');
+          const s = String(total%60).padStart(2,'0');
+          el.textContent = h+':'+m+':'+s;
+          }, 1000);
+          })();
+          // Share handler
+          function handleShare() {
+          const btn = document.getElementById('shareBtn');
+          const url = window.location.href;
+          const title = 'OB53 Proxy Server – Free Fire';
+          if (navigator.share) {
+          navigator.share({ title, url }).catch(() => {});
+          } else {
+          navigator.clipboard.writeText(url).then(() => {
+          btn.classList.add('copied');
+          const span = btn.querySelector('span');
+          if (span) span.textContent = 'Copied!';
+          setTimeout(() => {
+          btn.classList.remove('copied');
+          if (span) span.textContent = 'Share';
+          }, 2000);
+          }).catch(() => {});
+          }
+          }
+          // Animated viewer count (social proof)
+          const viewerEl = document.getElementById('viewerCount');
+          let viewers = 1247;
+          setInterval(() => {
+          const change = Math.floor(Math.random() * 9) - 3;
+          viewers = Math.max(1100, Math.min(1500, viewers + change));
+          if (viewerEl) viewerEl.textContent = viewers.toLocaleString();
+          }, 2400);
+          // Animated recent downloads counter
+          const dlEl = document.getElementById('recentDownloads');
+          let downloads = 2847;
+          setInterval(() => {
+          downloads += Math.floor(Math.random() * 3) + 1;
+          if (dlEl) dlEl.textContent = downloads.toLocaleString();
+          }, 3200);
+          // Anti-inspect
+          document.addEventListener('contextmenu', e => e.preventDefault());
+          document.addEventListener('keydown', e => {
+          if (
+          e.keyCode === 123 ||
+          (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) ||
+          (e.ctrlKey && (e.keyCode === 85 || e.keyCode === 83))
+          ) e.preventDefault();
           });
-        }
-      };
-      
-      // Attempt to play when video is ready
-      if (video.readyState >= 3) {
-        attemptPlay();
-      } else {
-        video.addEventListener('canplay', attemptPlay, { once: true });
-      }
-    }
-  </script>
-
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"c624fb0102334849bc577ade75d9cc2e","r":1,"spa":2}' crossorigin="anonymous"></script>
+          // Video autoplay
+          const video = document.getElementById('protectedVideo');
+          if (video) {
+          video.volume = 1.0;
+          video.addEventListener('contextmenu', e => e.preventDefault());
+          video.addEventListener('dragstart', e => e.preventDefault());
+          const tryPlay = () => {
+          video.play().catch(() => {
+          console.log("Autoplay blocked");
+          });
+          };
+          if (video.readyState >= 3) tryPlay();
+          else video.addEventListener('canplay', tryPlay, { once: true });
+          }
+        </script>
+      <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"6ec11553fb9a44ad8bcbf171c75771a3","r":1,"server_timing":{"name":"cfCacheStatus","cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
+    
+<!-- Mirrored from bluedsd.tnovaa.com/PyareProxyserver.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Jun 2026 17:17:39 GMT -->
 </html>
